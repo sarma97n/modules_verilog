@@ -1,0 +1,51 @@
+$date
+	Fri Oct 17 11:49:56 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module encoder_if_tb $end
+$var wire 4 ! binary_out [3:0] $end
+$var reg 1 " enable $end
+$var reg 16 # encoder_in [15:0] $end
+$scope module dut $end
+$var wire 1 " enable $end
+$var wire 16 $ encoder_in [15:0] $end
+$var reg 4 % binary_out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10000
+b1 #
+b1 $
+1"
+#20000
+b100 !
+b100 %
+b10000 #
+b10000 $
+#30000
+b1000 !
+b1000 %
+b100000000 #
+b100000000 $
+#40000
+b1100 !
+b1100 %
+b1000000000000 #
+b1000000000000 $
+#50000

@@ -1,0 +1,94 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000025d81335400 .scope module, "fulladder_half_tb" "fulladder_half_tb" 2 4;
+ .timescale -9 -12;
+v0000025d81343a50_0 .var "A", 0 0;
+v0000025d813435f0_0 .var "B", 0 0;
+v0000025d81343f50_0 .net "Carry", 0 0, L_0000025d81392950;  1 drivers
+v0000025d813441d0_0 .var "Cin", 0 0;
+v0000025d81343410_0 .net "Sum", 0 0, L_0000025d81286f60;  1 drivers
+v0000025d813434b0_0 .var/i "i", 31 0;
+S_0000025d8128d0e0 .scope module, "dut" "fulladder_half" 2 8, 3 10 0, S_0000025d81335400;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 1 "Sum";
+    .port_info 4 /OUTPUT 1 "Carry";
+L_0000025d81392950 .functor OR 1, L_0000025d81286d60, L_0000025d81392410, C4<0>, C4<0>;
+v0000025d81392030_0 .net "A", 0 0, v0000025d81343a50_0;  1 drivers
+v0000025d813920d0_0 .net "B", 0 0, v0000025d813435f0_0;  1 drivers
+v0000025d81392170_0 .net "C1", 0 0, L_0000025d81286d60;  1 drivers
+v0000025d81392210_0 .net "C2", 0 0, L_0000025d81392410;  1 drivers
+v0000025d813922b0_0 .net "Carry", 0 0, L_0000025d81392950;  alias, 1 drivers
+v0000025d81343ff0_0 .net "Cin", 0 0, v0000025d813441d0_0;  1 drivers
+v0000025d81344130_0 .net "S1", 0 0, L_0000025d81345aa0;  1 drivers
+v0000025d813439b0_0 .net "Sum", 0 0, L_0000025d81286f60;  alias, 1 drivers
+S_0000025d8128d270 .scope module, "HF1" "halfadder" 3 17, 3 1 0, S_0000025d8128d0e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Sum";
+    .port_info 3 /OUTPUT 1 "Carry";
+L_0000025d81345aa0 .functor XOR 1, v0000025d81343a50_0, v0000025d813435f0_0, C4<0>, C4<0>;
+L_0000025d81286d60 .functor AND 1, v0000025d81343a50_0, v0000025d813435f0_0, C4<1>, C4<1>;
+v0000025d81286b20_0 .net "A", 0 0, v0000025d81343a50_0;  alias, 1 drivers
+v0000025d8128d400_0 .net "B", 0 0, v0000025d813435f0_0;  alias, 1 drivers
+v0000025d8128d4a0_0 .net "Carry", 0 0, L_0000025d81286d60;  alias, 1 drivers
+v0000025d812864a0_0 .net "Sum", 0 0, L_0000025d81345aa0;  alias, 1 drivers
+S_0000025d81286540 .scope module, "HF2" "halfadder" 3 18, 3 1 0, S_0000025d8128d0e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Sum";
+    .port_info 3 /OUTPUT 1 "Carry";
+L_0000025d81286f60 .functor XOR 1, L_0000025d81345aa0, v0000025d813441d0_0, C4<0>, C4<0>;
+L_0000025d81392410 .functor AND 1, L_0000025d81345aa0, v0000025d813441d0_0, C4<1>, C4<1>;
+v0000025d812866d0_0 .net "A", 0 0, L_0000025d81345aa0;  alias, 1 drivers
+v0000025d81286770_0 .net "B", 0 0, v0000025d813441d0_0;  alias, 1 drivers
+v0000025d81286810_0 .net "Carry", 0 0, L_0000025d81392410;  alias, 1 drivers
+v0000025d812868b0_0 .net "Sum", 0 0, L_0000025d81286f60;  alias, 1 drivers
+    .scope S_0000025d81335400;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "fulladder_half.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000025d81335400 {0 0 0};
+    %vpi_call 2 15 "$display", "\011\011Time\011A\011B\011Cin\011Sum\011Carry" {0 0 0};
+    %vpi_call 2 16 "$monitor", $time, "\011%b\011%b\011%b\011%b\011%b", v0000025d81343a50_0, v0000025d813435f0_0, v0000025d813441d0_0, v0000025d81343410_0, v0000025d81343f50_0 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000025d813434b0_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0000025d813434b0_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0000025d813434b0_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0000025d813441d0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0000025d813435f0_0, 0, 1;
+    %store/vec4 v0000025d81343a50_0, 0, 1;
+    %delay 5000, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000025d813434b0_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000025d813434b0_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %delay 5000, 0;
+    %vpi_call 2 22 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fulladder_half.tb.v";
+    "./fulladder_half.v";

@@ -1,0 +1,110 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000020369fab4e0 .scope module, "mux16x1_structural_tb" "mux16x1_structural_tb" 2 4;
+ .timescale -9 -12;
+v000002036a004770_0 .var "A", 15 0;
+v000002036a004130_0 .net "F", 0 0, L_000002036a006bf0;  1 drivers
+v000002036a0044f0_0 .var "sel", 3 0;
+S_0000020369fab970 .scope module, "M" "mux16x1_structural" 2 6, 3 8 0, S_0000020369fab4e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "in";
+    .port_info 1 /INPUT 4 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v000002036a004310_0 .net "in", 15 0, v000002036a004770_0;  1 drivers
+v000002036a0043b0_0 .net "out", 0 0, L_000002036a006bf0;  alias, 1 drivers
+v000002036a0046d0_0 .net "sel", 3 0, v000002036a0044f0_0;  1 drivers
+v000002036a004950_0 .net "t", 3 0, L_000002036a007a50;  1 drivers
+L_000002036a004810 .part v000002036a004770_0, 0, 4;
+L_000002036a0048b0 .part v000002036a0044f0_0, 0, 2;
+L_000002036a004b30 .part v000002036a004770_0, 4, 4;
+L_000002036a004bd0 .part v000002036a0044f0_0, 0, 2;
+L_000002036a004ef0 .part v000002036a004770_0, 8, 4;
+L_000002036a004f90 .part v000002036a0044f0_0, 0, 2;
+L_000002036a006a10 .part v000002036a004770_0, 12, 4;
+L_000002036a0063d0 .part v000002036a0044f0_0, 0, 2;
+L_000002036a007a50 .concat8 [ 1 1 1 1], L_000002036a004590, L_000002036a004a90, L_000002036a004c70, L_000002036a0041d0;
+L_000002036a006d30 .part v000002036a0044f0_0, 2, 2;
+S_000002036a08d7a0 .scope module, "mux1" "mux4x1" 3 13, 3 1 0, S_0000020369fab970;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v0000020369fa4fb0_0 .net "in", 3 0, L_000002036a004810;  1 drivers
+v0000020369fabb00_0 .net "out", 0 0, L_000002036a004590;  1 drivers
+v0000020369fabba0_0 .net "sel", 1 0, L_000002036a0048b0;  1 drivers
+L_000002036a004590 .part/v L_000002036a004810, L_000002036a0048b0, 1;
+S_000002036a08d930 .scope module, "mux2" "mux4x1" 3 14, 3 1 0, S_0000020369fab970;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v000002036a08dac0_0 .net "in", 3 0, L_000002036a004b30;  1 drivers
+v000002036a08db60_0 .net "out", 0 0, L_000002036a004a90;  1 drivers
+v0000020369f82550_0 .net "sel", 1 0, L_000002036a004bd0;  1 drivers
+L_000002036a004a90 .part/v L_000002036a004b30, L_000002036a004bd0, 1;
+S_0000020369f825f0 .scope module, "mux3" "mux4x1" 3 15, 3 1 0, S_0000020369fab970;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v0000020369f82780_0 .net "in", 3 0, L_000002036a004ef0;  1 drivers
+v000002036a004270_0 .net "out", 0 0, L_000002036a004c70;  1 drivers
+v000002036a004090_0 .net "sel", 1 0, L_000002036a004f90;  1 drivers
+L_000002036a004c70 .part/v L_000002036a004ef0, L_000002036a004f90, 1;
+S_0000020369f82820 .scope module, "mux4" "mux4x1" 3 16, 3 1 0, S_0000020369fab970;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v000002036a004db0_0 .net "in", 3 0, L_000002036a006a10;  1 drivers
+v000002036a004450_0 .net "out", 0 0, L_000002036a0041d0;  1 drivers
+v000002036a004e50_0 .net "sel", 1 0, L_000002036a0063d0;  1 drivers
+L_000002036a0041d0 .part/v L_000002036a006a10, L_000002036a0063d0, 1;
+S_0000020369fb4020 .scope module, "mux5" "mux4x1" 3 17, 3 1 0, S_0000020369fab970;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v000002036a004630_0 .net "in", 3 0, L_000002036a007a50;  alias, 1 drivers
+v000002036a0049f0_0 .net "out", 0 0, L_000002036a006bf0;  alias, 1 drivers
+v000002036a004d10_0 .net "sel", 1 0, L_000002036a006d30;  1 drivers
+L_000002036a006bf0 .part/v L_000002036a007a50, L_000002036a006d30, 1;
+    .scope S_0000020369fab4e0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "mux16x1_structural.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000020369fab4e0 {0 0 0};
+    %vpi_call 2 11 "$monitor", "A = %h, sel = %h, F = %b", v000002036a004770_0, v000002036a0044f0_0, v000002036a004130_0 {0 0 0};
+    %delay 5000, 0;
+    %pushi/vec4 16138, 0, 16;
+    %store/vec4 v000002036a004770_0, 0, 16;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002036a0044f0_0, 0, 4;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v000002036a0044f0_0, 0, 4;
+    %delay 5000, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v000002036a0044f0_0, 0, 4;
+    %delay 5000, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v000002036a0044f0_0, 0, 4;
+    %delay 5000, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v000002036a0044f0_0, 0, 4;
+    %delay 5000, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux16x1_structural.tb.v";
+    "./mux16x1_structural.v";

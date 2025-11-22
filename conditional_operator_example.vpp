@@ -1,0 +1,40 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002357f396360 .scope module, "conditional_operator_example" "conditional_operator_example" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "data_in";
+    .port_info 1 /OUTPUT 4 "result";
+L_000002357f6a8c48 .functor BUFT 1, C4<1001>, C4<0>, C4<0>, C4<0>;
+v000002357f3964f0_0 .net/2u *"_ivl_0", 3 0, L_000002357f6a8c48;  1 drivers
+L_000002357f6a8d20 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v000002357f396590_0 .net/2u *"_ivl_10", 3 0, L_000002357f6a8d20;  1 drivers
+L_000002357f6a8d68 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v000002357f396630_0 .net/2u *"_ivl_12", 3 0, L_000002357f6a8d68;  1 drivers
+v000002357f3966d0_0 .net *"_ivl_14", 3 0, L_000002357f6a8b80;  1 drivers
+v000002357f39ece0_0 .net *"_ivl_16", 3 0, L_000002357f6a7e60;  1 drivers
+v000002357f39ed80_0 .net *"_ivl_2", 0 0, L_000002357f6a8860;  1 drivers
+L_000002357f6a8c90 .functor BUFT 1, C4<1111>, C4<0>, C4<0>, C4<0>;
+v000002357f39ee20_0 .net/2u *"_ivl_4", 3 0, L_000002357f6a8c90;  1 drivers
+L_000002357f6a8cd8 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v000002357f39eec0_0 .net/2u *"_ivl_6", 3 0, L_000002357f6a8cd8;  1 drivers
+v000002357f663b40_0 .net *"_ivl_8", 0 0, L_000002357f6a8220;  1 drivers
+o000002357f667188 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v000002357f663be0_0 .net "data_in", 3 0, o000002357f667188;  0 drivers
+v000002357f6a8180_0 .net "result", 3 0, L_000002357f6a7d20;  1 drivers
+L_000002357f6a8860 .cmp/gt 4, o000002357f667188, L_000002357f6a8c48;
+L_000002357f6a8220 .cmp/eq 4, o000002357f667188, L_000002357f6a8cd8;
+L_000002357f6a8b80 .arith/sum 4, o000002357f667188, L_000002357f6a8d68;
+L_000002357f6a7e60 .functor MUXZ 4, L_000002357f6a8b80, L_000002357f6a8d20, L_000002357f6a8220, C4<>;
+L_000002357f6a7d20 .functor MUXZ 4, L_000002357f6a7e60, L_000002357f6a8c90, L_000002357f6a8860, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "conditional_operator_example.v";

@@ -1,0 +1,49 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000011ae0f56460 .scope module, "mux4x1_dataflow" "mux4x1_dataflow" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 4 "data_in";
+    .port_info 2 /INPUT 2 "sel";
+L_0000011ae105bfe8 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0000011ae0f565f0_0 .net/2u *"_ivl_0", 1 0, L_0000011ae105bfe8;  1 drivers
+v0000011ae0f56690_0 .net *"_ivl_11", 0 0, L_0000011ae1011ef0;  1 drivers
+L_0000011ae105c078 .functor BUFT 1, C4<10>, C4<0>, C4<0>, C4<0>;
+v0000011ae0f56730_0 .net/2u *"_ivl_12", 1 0, L_0000011ae105c078;  1 drivers
+v0000011ae0f567d0_0 .net *"_ivl_14", 0 0, L_0000011ae1011770;  1 drivers
+v0000011ae0f5ed00_0 .net *"_ivl_17", 0 0, L_0000011ae10114f0;  1 drivers
+v0000011ae0f5eda0_0 .net *"_ivl_19", 0 0, L_0000011ae1011f90;  1 drivers
+v0000011ae0f5ee40_0 .net *"_ivl_2", 0 0, L_0000011ae1011d10;  1 drivers
+v0000011ae1011a90_0 .net *"_ivl_20", 0 0, L_0000011ae1012030;  1 drivers
+v0000011ae1011bd0_0 .net *"_ivl_22", 0 0, L_0000011ae10120d0;  1 drivers
+v0000011ae1011950_0 .net *"_ivl_5", 0 0, L_0000011ae1011c70;  1 drivers
+L_0000011ae105c030 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0000011ae1012210_0 .net/2u *"_ivl_6", 1 0, L_0000011ae105c030;  1 drivers
+v0000011ae10116d0_0 .net *"_ivl_8", 0 0, L_0000011ae1011db0;  1 drivers
+o0000011ae10171a8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000011ae1011e50_0 .net "data_in", 3 0, o0000011ae10171a8;  0 drivers
+v0000011ae1011b30_0 .net "out", 0 0, L_0000011ae1012170;  1 drivers
+o0000011ae1017208 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000011ae1011450_0 .net "sel", 1 0, o0000011ae1017208;  0 drivers
+L_0000011ae1011d10 .cmp/eq 2, o0000011ae1017208, L_0000011ae105bfe8;
+L_0000011ae1011c70 .part o0000011ae10171a8, 0, 1;
+L_0000011ae1011db0 .cmp/eq 2, o0000011ae1017208, L_0000011ae105c030;
+L_0000011ae1011ef0 .part o0000011ae10171a8, 1, 1;
+L_0000011ae1011770 .cmp/eq 2, o0000011ae1017208, L_0000011ae105c078;
+L_0000011ae10114f0 .part o0000011ae10171a8, 2, 1;
+L_0000011ae1011f90 .part o0000011ae10171a8, 3, 1;
+L_0000011ae1012030 .functor MUXZ 1, L_0000011ae1011f90, L_0000011ae10114f0, L_0000011ae1011770, C4<>;
+L_0000011ae10120d0 .functor MUXZ 1, L_0000011ae1012030, L_0000011ae1011ef0, L_0000011ae1011db0, C4<>;
+L_0000011ae1012170 .functor MUXZ 1, L_0000011ae10120d0, L_0000011ae1011c70, L_0000011ae1011d10, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux4x1_dataflow.v";

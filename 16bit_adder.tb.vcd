@@ -1,0 +1,109 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001cb9d90ce00 .scope module, "adder_test" "adder_test" 2 4;
+ .timescale -9 -12;
+v000001cb9d9a8880_0 .net "Cy", 0 0, L_000001cb9d9a93c0;  1 drivers
+v000001cb9d9a78e0_0 .net "P", 0 0, L_000001cb9d9a9000;  1 drivers
+v000001cb9d9a95a0_0 .net "S", 0 0, L_000001cb9d9a8ec0;  1 drivers
+v000001cb9d9a96e0_0 .net "V", 0 0, L_000001cb9d94c150;  1 drivers
+v000001cb9d9a7c00_0 .var "X", 15 0;
+v000001cb9d9a8e20_0 .var "Y", 15 0;
+v000001cb9d9a7b60_0 .net "Z", 15 0, L_000001cb9d9a9280;  1 drivers
+v000001cb9d9a8f60_0 .net "Zr", 0 0, L_000001cb9d9a7fc0;  1 drivers
+S_000001cb9d90cf90 .scope module, "dut" "adder" 2 8, 3 1 0, S_000001cb9d90ce00;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 16 "X";
+    .port_info 1 /INPUT 16 "Y";
+    .port_info 2 /OUTPUT 16 "Z";
+    .port_info 3 /OUTPUT 1 "sign";
+    .port_info 4 /OUTPUT 1 "zero";
+    .port_info 5 /OUTPUT 1 "carry";
+    .port_info 6 /OUTPUT 1 "parity";
+    .port_info 7 /OUTPUT 1 "overflow";
+L_000001cb9d94c380 .functor AND 1, L_000001cb9d9a9640, L_000001cb9d9a8240, C4<1>, C4<1>;
+L_000001cb9d94c310 .functor NOT 1, L_000001cb9d9a81a0, C4<0>, C4<0>, C4<0>;
+L_000001cb9d94bdd0 .functor AND 1, L_000001cb9d94c380, L_000001cb9d94c310, C4<1>, C4<1>;
+L_000001cb9d94bc80 .functor NOT 1, L_000001cb9d9a7980, C4<0>, C4<0>, C4<0>;
+L_000001cb9d94c0e0 .functor NOT 1, L_000001cb9d9a7a20, C4<0>, C4<0>, C4<0>;
+L_000001cb9d94c070 .functor AND 1, L_000001cb9d94bc80, L_000001cb9d94c0e0, C4<1>, C4<1>;
+L_000001cb9d94c1c0 .functor AND 1, L_000001cb9d94c070, L_000001cb9d9a7de0, C4<1>, C4<1>;
+L_000001cb9d94c150 .functor OR 1, L_000001cb9d94bdd0, L_000001cb9d94c1c0, C4<0>, C4<0>;
+v000001cb9d94b250_0 .net "X", 15 0, v000001cb9d9a7c00_0;  1 drivers
+v000001cb9d94b430_0 .net "Y", 15 0, v000001cb9d9a8e20_0;  1 drivers
+v000001cb9d94b2f0_0 .net "Z", 15 0, L_000001cb9d9a9280;  alias, 1 drivers
+L_000001cb9d9a98f0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001cb9d94ab70_0 .net *"_ivl_10", 0 0, L_000001cb9d9a98f0;  1 drivers
+v000001cb9d94adf0_0 .net *"_ivl_11", 16 0, L_000001cb9d9a9780;  1 drivers
+v000001cb9d94aa30_0 .net *"_ivl_20", 0 0, L_000001cb9d9a9640;  1 drivers
+v000001cb9d94b570_0 .net *"_ivl_22", 0 0, L_000001cb9d9a8240;  1 drivers
+v000001cb9d94aad0_0 .net *"_ivl_23", 0 0, L_000001cb9d94c380;  1 drivers
+v000001cb9d94b610_0 .net *"_ivl_26", 0 0, L_000001cb9d9a81a0;  1 drivers
+v000001cb9d94af30_0 .net *"_ivl_27", 0 0, L_000001cb9d94c310;  1 drivers
+v000001cb9d94ae90_0 .net *"_ivl_29", 0 0, L_000001cb9d94bdd0;  1 drivers
+v000001cb9d94b070_0 .net *"_ivl_3", 16 0, L_000001cb9d9a8d80;  1 drivers
+v000001cb9d94ac10_0 .net *"_ivl_32", 0 0, L_000001cb9d9a7980;  1 drivers
+v000001cb9d94a850_0 .net *"_ivl_33", 0 0, L_000001cb9d94bc80;  1 drivers
+v000001cb9d94b4d0_0 .net *"_ivl_36", 0 0, L_000001cb9d9a7a20;  1 drivers
+v000001cb9d94b6b0_0 .net *"_ivl_37", 0 0, L_000001cb9d94c0e0;  1 drivers
+v000001cb9d94b110_0 .net *"_ivl_39", 0 0, L_000001cb9d94c070;  1 drivers
+v000001cb9d94acb0_0 .net *"_ivl_42", 0 0, L_000001cb9d9a7de0;  1 drivers
+v000001cb9d94a7b0_0 .net *"_ivl_43", 0 0, L_000001cb9d94c1c0;  1 drivers
+L_000001cb9d9a98a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001cb9d94a8f0_0 .net *"_ivl_6", 0 0, L_000001cb9d9a98a8;  1 drivers
+v000001cb9d94b1b0_0 .net *"_ivl_7", 16 0, L_000001cb9d9a9460;  1 drivers
+v000001cb9d94ad50_0 .net "carry", 0 0, L_000001cb9d9a93c0;  alias, 1 drivers
+v000001cb9d94b390_0 .net "overflow", 0 0, L_000001cb9d94c150;  alias, 1 drivers
+v000001cb9d9a9500_0 .net "parity", 0 0, L_000001cb9d9a9000;  alias, 1 drivers
+v000001cb9d9a91e0_0 .net "sign", 0 0, L_000001cb9d9a8ec0;  alias, 1 drivers
+v000001cb9d9a9320_0 .net "zero", 0 0, L_000001cb9d9a7fc0;  alias, 1 drivers
+L_000001cb9d9a93c0 .part L_000001cb9d9a9780, 16, 1;
+L_000001cb9d9a9280 .part L_000001cb9d9a9780, 0, 16;
+L_000001cb9d9a8d80 .concat [ 16 1 0 0], v000001cb9d9a7c00_0, L_000001cb9d9a98a8;
+L_000001cb9d9a9460 .concat [ 16 1 0 0], v000001cb9d9a8e20_0, L_000001cb9d9a98f0;
+L_000001cb9d9a9780 .arith/sum 17, L_000001cb9d9a8d80, L_000001cb9d9a9460;
+L_000001cb9d9a8ec0 .part L_000001cb9d9a9280, 15, 1;
+L_000001cb9d9a7fc0 .reduce/nor L_000001cb9d9a9280;
+L_000001cb9d9a9000 .reduce/xnor L_000001cb9d9a9280;
+L_000001cb9d9a9640 .part v000001cb9d9a7c00_0, 15, 1;
+L_000001cb9d9a8240 .part v000001cb9d9a8e20_0, 15, 1;
+L_000001cb9d9a81a0 .part L_000001cb9d9a9280, 15, 1;
+L_000001cb9d9a7980 .part v000001cb9d9a7c00_0, 15, 1;
+L_000001cb9d9a7a20 .part v000001cb9d9a8e20_0, 15, 1;
+L_000001cb9d9a7de0 .part L_000001cb9d9a9280, 15, 1;
+    .scope S_000001cb9d90ce00;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "16bit_adder.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001cb9d90ce00 {0 0 0};
+    %vpi_call 2 12 "$monitor", $time, "X=%h,Y=%h,Z=%h,S=%b,Zr=%b,Cy=%b,P=%b,V=%b", v000001cb9d9a7c00_0, v000001cb9d9a8e20_0, v000001cb9d9a7b60_0, v000001cb9d9a95a0_0, v000001cb9d9a8f60_0, v000001cb9d9a8880_0, v000001cb9d9a78e0_0, v000001cb9d9a96e0_0 {0 0 0};
+    %delay 5000, 0;
+    %pushi/vec4 36863, 0, 16;
+    %store/vec4 v000001cb9d9a7c00_0, 0, 16;
+    %pushi/vec4 32768, 0, 16;
+    %store/vec4 v000001cb9d9a8e20_0, 0, 16;
+    %delay 5000, 0;
+    %pushi/vec4 65534, 0, 16;
+    %store/vec4 v000001cb9d9a7c00_0, 0, 16;
+    %pushi/vec4 2, 0, 16;
+    %store/vec4 v000001cb9d9a8e20_0, 0, 16;
+    %delay 5000, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v000001cb9d9a7c00_0, 0, 16;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v000001cb9d9a8e20_0, 0, 16;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "16bit_adder.tb.v";
+    "./16bit_adder.v";

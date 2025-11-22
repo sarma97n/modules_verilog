@@ -1,0 +1,126 @@
+$date
+	Mon Nov 03 12:49:09 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module gray_binary_tb $end
+$var wire 8 ! binary_out [7:0] $end
+$var reg 8 " gray_in [7:0] $end
+$var integer 32 # i [31:0] $end
+$scope module dut $end
+$var wire 8 $ gray_in [7:0] $end
+$var wire 8 % binary_out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+bx $
+b0 #
+bx "
+bx !
+$end
+#5000
+b0 !
+b0 %
+b1 #
+b0 "
+b0 $
+#10000
+b1 !
+b1 %
+b10 #
+b1 "
+b1 $
+#15000
+b11 !
+b11 %
+b11 #
+b10 "
+b10 $
+#20000
+b10 !
+b10 %
+b100 #
+b11 "
+b11 $
+#25000
+b110 !
+b110 %
+b101 #
+b100 "
+b100 $
+#30000
+b111 !
+b111 %
+b110 #
+b101 "
+b101 $
+#35000
+b101 !
+b101 %
+b111 #
+b110 "
+b110 $
+#40000
+b100 !
+b100 %
+b1000 #
+b111 "
+b111 $
+#45000
+b1100 !
+b1100 %
+b1001 #
+b1000 "
+b1000 $
+#50000
+b1101 !
+b1101 %
+b1010 #
+b1001 "
+b1001 $
+#55000
+b1111 !
+b1111 %
+b1011 #
+b1010 "
+b1010 $
+#60000
+b1110 !
+b1110 %
+b1100 #
+b1011 "
+b1011 $
+#65000
+b1010 !
+b1010 %
+b1101 #
+b1100 "
+b1100 $
+#70000
+b1011 !
+b1011 %
+b1110 #
+b1101 "
+b1101 $
+#75000
+b1001 !
+b1001 %
+b1111 #
+b1110 "
+b1110 $
+#80000
+b1000 !
+b1000 %
+b10000 #
+b1111 "
+b1111 $

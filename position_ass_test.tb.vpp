@@ -1,0 +1,88 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000213d51247d0 .scope module, "position_ass_test_tb" "position_ass_test_tb" 2 4;
+ .timescale -9 -12;
+v00000213d51268a0_0 .net "OUT", 0 0, L_00000213d5134100;  1 drivers
+v00000213d51808a0_0 .var "X1", 0 0;
+v00000213d5180940_0 .var "X2", 0 0;
+v00000213d51809e0_0 .var "X3", 0 0;
+v00000213d5180a80_0 .var "X4", 0 0;
+v00000213d5180b20_0 .var "X5", 0 0;
+v00000213d5180bc0_0 .var "X6", 0 0;
+S_00000213d527c740 .scope module, "dut" "position_asso_test" 2 7, 3 1 0, S_00000213d51247d0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "C";
+    .port_info 3 /INPUT 1 "D";
+    .port_info 4 /INPUT 1 "E";
+    .port_info 5 /INPUT 1 "F";
+    .port_info 6 /OUTPUT 1 "Y";
+L_00000213d527cb30/d .functor NAND 1, v00000213d51808a0_0, v00000213d5180940_0, C4<1>, C4<1>;
+L_00000213d527cb30 .delay 1 (1000,1000,1000) L_00000213d527cb30/d;
+L_00000213d5133fb0/d .functor AND 1, v00000213d51809e0_0, L_00000213d5134020, v00000213d5180a80_0, C4<1>;
+L_00000213d5133fb0 .delay 1 (2000,2000,2000) L_00000213d5133fb0/d;
+L_00000213d5134020 .functor NOT 1, v00000213d5180940_0, C4<0>, C4<0>, C4<0>;
+L_00000213d5134090/d .functor NOR 1, v00000213d5180b20_0, v00000213d5180bc0_0, C4<0>, C4<0>;
+L_00000213d5134090 .delay 1 (1000,1000,1000) L_00000213d5134090/d;
+L_00000213d5134100/d .functor NAND 1, L_00000213d527cb30, L_00000213d5133fb0, L_00000213d5134090, C4<1>;
+L_00000213d5134100 .delay 1 (1000,1000,1000) L_00000213d5134100/d;
+v00000213d527c950_0 .net "A", 0 0, v00000213d51808a0_0;  1 drivers
+v00000213d5276740_0 .net "B", 0 0, v00000213d5180940_0;  1 drivers
+v00000213d527c9f0_0 .net "C", 0 0, v00000213d51809e0_0;  1 drivers
+v00000213d527ca90_0 .net "D", 0 0, v00000213d5180a80_0;  1 drivers
+v00000213d5126440_0 .net "E", 0 0, v00000213d5180b20_0;  1 drivers
+v00000213d51264e0_0 .net "F", 0 0, v00000213d5180bc0_0;  1 drivers
+v00000213d5126580_0 .net "Y", 0 0, L_00000213d5134100;  alias, 1 drivers
+v00000213d5126620_0 .net *"_ivl_0", 0 0, L_00000213d5134020;  1 drivers
+v00000213d51266c0_0 .net "t1", 0 0, L_00000213d527cb30;  1 drivers
+v00000213d5126760_0 .net "t2", 0 0, L_00000213d5133fb0;  1 drivers
+v00000213d5126800_0 .net "t3", 0 0, L_00000213d5134090;  1 drivers
+    .scope S_00000213d51247d0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "position_aso_test.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000213d51247d0 {0 0 0};
+    %vpi_call 2 11 "$monitor", $time, "X1=%b,X2=%b,X3=%b,X4=%b,X5=%b,X6=%b,OUT=%b", v00000213d51808a0_0, v00000213d5180940_0, v00000213d51809e0_0, v00000213d5180a80_0, v00000213d5180b20_0, v00000213d5180bc0_0, v00000213d51268a0_0 {0 0 0};
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d51808a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000213d5180940_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000213d51809e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d5180a80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000213d5180b20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d5180bc0_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000213d51808a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d51809e0_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d51808a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000213d51809e0_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000213d5180bc0_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "position_ass_test.tb.v";
+    "./position_asso_test.v";

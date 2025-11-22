@@ -1,0 +1,80 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000188b7602620 .scope module, "mux16x1_structural" "mux16x1_structural" 2 8;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "in";
+    .port_info 1 /INPUT 4 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+o00000188b7637558 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+v00000188b767ff70_0 .net "in", 15 0, o00000188b7637558;  0 drivers
+v00000188b7680010_0 .net "out", 0 0, L_00000188b76803d0;  1 drivers
+o00000188b7637588 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v00000188b7680650_0 .net "sel", 3 0, o00000188b7637588;  0 drivers
+v00000188b7680790_0 .net "t", 3 0, L_00000188b767fe30;  1 drivers
+L_00000188b7680290 .part o00000188b7637558, 0, 4;
+L_00000188b767fcf0 .part o00000188b7637588, 0, 2;
+L_00000188b767fa70 .part o00000188b7637558, 4, 4;
+L_00000188b767fbb0 .part o00000188b7637588, 0, 2;
+L_00000188b7680330 .part o00000188b7637558, 8, 4;
+L_00000188b76806f0 .part o00000188b7637588, 0, 2;
+L_00000188b7680510 .part o00000188b7637558, 12, 4;
+L_00000188b767f890 .part o00000188b7637588, 0, 2;
+L_00000188b767fe30 .concat8 [ 1 1 1 1], L_00000188b767f9d0, L_00000188b76805b0, L_00000188b767fb10, L_00000188b76800b0;
+L_00000188b7680470 .part o00000188b7637588, 2, 2;
+S_00000188b76027b0 .scope module, "mux1" "mux4x1" 2 13, 2 1 0, S_00000188b7602620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v00000188b757b920_0 .net "in", 3 0, L_00000188b7680290;  1 drivers
+v00000188b7632f90_0 .net "out", 0 0, L_00000188b767f9d0;  1 drivers
+v00000188b7633030_0 .net "sel", 1 0, L_00000188b767fcf0;  1 drivers
+L_00000188b767f9d0 .part/v L_00000188b7680290, L_00000188b767fcf0, 1;
+S_00000188b76330d0 .scope module, "mux2" "mux4x1" 2 14, 2 1 0, S_00000188b7602620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v00000188b7633260_0 .net "in", 3 0, L_00000188b767fa70;  1 drivers
+v00000188b7633300_0 .net "out", 0 0, L_00000188b76805b0;  1 drivers
+v00000188b76333a0_0 .net "sel", 1 0, L_00000188b767fbb0;  1 drivers
+L_00000188b76805b0 .part/v L_00000188b767fa70, L_00000188b767fbb0, 1;
+S_00000188b7633440 .scope module, "mux3" "mux4x1" 2 15, 2 1 0, S_00000188b7602620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v00000188b76335d0_0 .net "in", 3 0, L_00000188b7680330;  1 drivers
+v00000188b7633670_0 .net "out", 0 0, L_00000188b767fb10;  1 drivers
+v00000188b7633710_0 .net "sel", 1 0, L_00000188b76806f0;  1 drivers
+L_00000188b767fb10 .part/v L_00000188b7680330, L_00000188b76806f0, 1;
+S_00000188b76337b0 .scope module, "mux4" "mux4x1" 2 16, 2 1 0, S_00000188b7602620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v00000188b7633940_0 .net "in", 3 0, L_00000188b7680510;  1 drivers
+v00000188b76339e0_0 .net "out", 0 0, L_00000188b76800b0;  1 drivers
+v00000188b7633a80_0 .net "sel", 1 0, L_00000188b767f890;  1 drivers
+L_00000188b76800b0 .part/v L_00000188b7680510, L_00000188b767f890, 1;
+S_00000188b7633b20 .scope module, "mux5" "mux4x1" 2 17, 2 1 0, S_00000188b7602620;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+v00000188b7633cb0_0 .net "in", 3 0, L_00000188b767fe30;  alias, 1 drivers
+v00000188b7633d50_0 .net "out", 0 0, L_00000188b76803d0;  alias, 1 drivers
+v00000188b7633df0_0 .net "sel", 1 0, L_00000188b7680470;  1 drivers
+L_00000188b76803d0 .part/v L_00000188b767fe30, L_00000188b7680470, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux16x1_structural.v";

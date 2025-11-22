@@ -1,0 +1,79 @@
+$date
+	Sat Oct 18 10:48:42 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module adder_test $end
+$var wire 1 ! Zr $end
+$var wire 16 " Z [15:0] $end
+$var wire 1 # V $end
+$var wire 1 $ S $end
+$var wire 1 % P $end
+$var wire 1 & Cy $end
+$var reg 16 ' X [15:0] $end
+$var reg 16 ( Y [15:0] $end
+$scope module dut $end
+$var wire 16 ) X [15:0] $end
+$var wire 16 * Y [15:0] $end
+$var wire 1 # overflow $end
+$var wire 1 ! zero $end
+$var wire 1 $ sign $end
+$var wire 1 % parity $end
+$var wire 1 & carry $end
+$var wire 16 + Z [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+bx (
+bx '
+x&
+x%
+x$
+x#
+bx "
+x!
+$end
+#5000
+1#
+0$
+0!
+1%
+b111111111111 "
+b111111111111 +
+1&
+b1000000000000000 (
+b1000000000000000 *
+b1000111111111111 '
+b1000111111111111 )
+#10000
+0#
+1!
+b0 "
+b0 +
+b10 (
+b10 *
+b1111111111111110 '
+b1111111111111110 )
+#15000
+1$
+0!
+b1111111111111111 "
+b1111111111111111 +
+0&
+b101010101010101 (
+b101010101010101 *
+b1010101010101010 '
+b1010101010101010 )
+#20000

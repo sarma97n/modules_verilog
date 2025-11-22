@@ -1,0 +1,92 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000161febcb9e0 .scope module, "expilict_ass_test_tb" "expilict_ass_test_tb" 2 4;
+ .timescale -9 -12;
+v00000161feaf56d0_0 .net "OUT", 0 0, L_00000161feb52a00;  1 drivers
+v00000161feb51b20_0 .var "X1", 0 0;
+v00000161feb523e0_0 .var "X2", 0 0;
+v00000161feb52200_0 .var "X3", 0 0;
+v00000161feb51d00_0 .var "X4", 0 0;
+v00000161feb522a0_0 .var "X5", 0 0;
+v00000161feb51bc0_0 .var "X6", 0 0;
+S_00000161febcc740 .scope module, "dut" "explicit_ass_test" 2 8, 3 1 0, S_00000161febcb9e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "C";
+    .port_info 3 /INPUT 1 "D";
+    .port_info 4 /INPUT 1 "E";
+    .port_info 5 /INPUT 1 "F";
+    .port_info 6 /OUTPUT 1 "Y";
+L_00000161febc9670/d .functor NAND 1, v00000161feb51b20_0, v00000161feb523e0_0, C4<1>, C4<1>;
+L_00000161febc9670 .delay 1 (1000,1000,1000) L_00000161febc9670/d;
+L_00000161febccb30/d .functor AND 1, v00000161feb52200_0, L_00000161feaf5770, v00000161feb51d00_0, C4<1>;
+L_00000161febccb30 .delay 1 (2000,2000,2000) L_00000161febccb30/d;
+L_00000161feaf5770 .functor NOT 1, v00000161feb523e0_0, C4<0>, C4<0>, C4<0>;
+L_00000161feaf57e0/d .functor NOR 1, v00000161feb522a0_0, v00000161feb51bc0_0, C4<0>, C4<0>;
+L_00000161feaf57e0 .delay 1 (1000,1000,1000) L_00000161feaf57e0/d;
+L_00000161feb52a00/d .functor NAND 1, L_00000161febc9670, L_00000161febccb30, L_00000161feaf57e0, C4<1>;
+L_00000161feb52a00 .delay 1 (1000,1000,1000) L_00000161feb52a00/d;
+v00000161febcc950_0 .net "A", 0 0, v00000161feb51b20_0;  1 drivers
+v00000161febc6740_0 .net "B", 0 0, v00000161feb523e0_0;  1 drivers
+v00000161febcc9f0_0 .net "C", 0 0, v00000161feb52200_0;  1 drivers
+v00000161febcca90_0 .net "D", 0 0, v00000161feb51d00_0;  1 drivers
+v00000161feb04250_0 .net "E", 0 0, v00000161feb522a0_0;  1 drivers
+v00000161feb042f0_0 .net "F", 0 0, v00000161feb51bc0_0;  1 drivers
+v00000161feb04390_0 .net "Y", 0 0, L_00000161feb52a00;  alias, 1 drivers
+v00000161feb04430_0 .net *"_ivl_0", 0 0, L_00000161feaf5770;  1 drivers
+v00000161feb044d0_0 .net "t1", 0 0, L_00000161febc9670;  1 drivers
+v00000161feb04570_0 .net "t2", 0 0, L_00000161febccb30;  1 drivers
+v00000161feb04610_0 .net "t3", 0 0, L_00000161feaf57e0;  1 drivers
+    .scope S_00000161febcb9e0;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "expilicit_ass_test.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000161febcb9e0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000161febcb9e0;
+T_1 ;
+    %vpi_call 2 16 "$monitor", $time, "X1=%b,X2=%b,X3=%b,X4=%b,X5=%b,X6=%b,OUT=%b", v00000161feb51b20_0, v00000161feb523e0_0, v00000161feb52200_0, v00000161feb51d00_0, v00000161feb522a0_0, v00000161feb51bc0_0, v00000161feaf56d0_0 {0 0 0};
+    %delay 5000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb51b20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb523e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb52200_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb51d00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb522a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb51bc0_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb51b20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000161feb52200_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000161feb51b20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000161feb52200_0, 0, 1;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000161feb51bc0_0, 0, 1;
+    %delay 5000, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "expilict_ass_test.tb.v";
+    "./expilicit_ass_test.v";

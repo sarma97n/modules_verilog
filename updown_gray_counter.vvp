@@ -1,0 +1,61 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000225dda6ed20 .scope module, "updown_gray_counter" "updown_gray_counter" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "mode";
+    .port_info 3 /OUTPUT 4 "gray";
+L_00000225dda6ef50 .functor XOR 4, v00000225dda6bbd0_0, L_00000225ddab06b0, C4<0000>, C4<0000>;
+v00000225dda66ac0_0 .net *"_ivl_0", 3 0, L_00000225ddab06b0;  1 drivers
+v00000225dda66860_0 .net *"_ivl_2", 2 0, L_00000225dda6bef0;  1 drivers
+L_00000225ddafc028 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000225dda6eeb0_0 .net *"_ivl_4", 0 0, L_00000225ddafc028;  1 drivers
+v00000225dda6bbd0_0 .var "binary", 3 0;
+o00000225ddab7068 .functor BUFZ 1, C4<z>; HiZ drive
+v00000225dda6bc70_0 .net "clk", 0 0, o00000225ddab7068;  0 drivers
+v00000225dda6bd10_0 .net "gray", 3 0, L_00000225dda6ef50;  1 drivers
+o00000225ddab70c8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000225dda6bdb0_0 .net "mode", 0 0, o00000225ddab70c8;  0 drivers
+o00000225ddab70f8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000225dda6be50_0 .net "reset", 0 0, o00000225ddab70f8;  0 drivers
+E_00000225dda6c910 .event posedge, v00000225dda6be50_0, v00000225dda6bc70_0;
+L_00000225dda6bef0 .part v00000225dda6bbd0_0, 1, 3;
+L_00000225ddab06b0 .concat [ 3 1 0 0], L_00000225dda6bef0, L_00000225ddafc028;
+    .scope S_00000225dda6ed20;
+T_0 ;
+    %wait E_00000225dda6c910;
+    %load/vec4 v00000225dda6be50_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v00000225dda6bbd0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000225dda6bdb0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v00000225dda6bbd0_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v00000225dda6bbd0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v00000225dda6bbd0_0;
+    %subi 1, 0, 4;
+    %assign/vec4 v00000225dda6bbd0_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "updown_gray_counter.v";

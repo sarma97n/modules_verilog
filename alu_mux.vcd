@@ -1,0 +1,208 @@
+$date
+	Thu Oct 30 17:50:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module alu_mux_tb $end
+$var wire 1 ! HSum $end
+$var wire 1 " HDiff $end
+$var wire 1 # HCarry $end
+$var wire 1 $ HBorrow $end
+$var wire 1 % FSum $end
+$var wire 1 & FDiff $end
+$var wire 1 ' FCarry $end
+$var wire 1 ( FBorrow $end
+$var reg 1 ) A $end
+$var reg 1 * B $end
+$var reg 1 + C $end
+$var integer 32 , i [31:0] $end
+$scope module dut1 $end
+$var wire 1 ) A $end
+$var wire 1 * B $end
+$var wire 1 # Carry $end
+$var wire 1 ! Sum $end
+$scope module HAM $end
+$var wire 1 ) I0 $end
+$var wire 1 - I1 $end
+$var wire 1 * S $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$scope module dut2 $end
+$var wire 1 ) A $end
+$var wire 1 * B $end
+$var wire 1 + Cin $end
+$var wire 1 . w2 $end
+$var wire 1 / w1 $end
+$var wire 1 % Sum $end
+$var wire 1 ' Carry $end
+$scope module FAM1 $end
+$var wire 1 ) I0 $end
+$var wire 1 0 I1 $end
+$var wire 1 * S $end
+$var wire 1 / out $end
+$upscope $end
+$scope module FAM2 $end
+$var wire 1 / I0 $end
+$var wire 1 1 I1 $end
+$var wire 1 + S $end
+$var wire 1 % out $end
+$upscope $end
+$scope module FAM3 $end
+$var wire 1 . I0 $end
+$var wire 1 + I1 $end
+$var wire 1 / S $end
+$var wire 1 ' out $end
+$upscope $end
+$upscope $end
+$scope module dut3 $end
+$var wire 1 ) A $end
+$var wire 1 * B $end
+$var wire 1 $ Borrow $end
+$var wire 1 " Diff $end
+$scope module HSM1 $end
+$var wire 1 ) I0 $end
+$var wire 1 2 I1 $end
+$var wire 1 * S $end
+$var wire 1 " out $end
+$upscope $end
+$upscope $end
+$scope module dut4 $end
+$var wire 1 ) A $end
+$var wire 1 * B $end
+$var wire 1 + C $end
+$var wire 1 3 w2 $end
+$var wire 1 4 w1 $end
+$var wire 1 & Diff $end
+$var wire 1 ( Borrow $end
+$scope module FSM1 $end
+$var wire 1 ) I0 $end
+$var wire 1 5 I1 $end
+$var wire 1 * S $end
+$var wire 1 4 out $end
+$upscope $end
+$scope module FSM2 $end
+$var wire 1 4 I0 $end
+$var wire 1 6 I1 $end
+$var wire 1 + S $end
+$var wire 1 & out $end
+$upscope $end
+$scope module FSM3 $end
+$var wire 1 3 I0 $end
+$var wire 1 + I1 $end
+$var wire 1 4 S $end
+$var wire 1 ( out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+06
+15
+14
+03
+12
+01
+10
+1/
+0.
+1-
+b0 ,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+1"
+1!
+$end
+#5000
+1%
+1&
+1+
+b1 ,
+#10000
+11
+16
+0!
+0/
+1$
+0"
+13
+04
+1%
+1&
+1*
+0+
+b10 ,
+#15000
+0%
+1'
+0&
+1(
+1+
+b11 ,
+#20000
+11
+16
+0-
+00
+02
+05
+0!
+0/
+0$
+0"
+03
+04
+1%
+0'
+1&
+0(
+1)
+0*
+0+
+b100 ,
+#25000
+0%
+1'
+0&
+1(
+1+
+b101 ,
+#30000
+01
+06
+1#
+1!
+1.
+1/
+1"
+14
+0%
+1'
+0&
+0(
+1*
+0+
+b110 ,
+#35000
+1%
+1&
+1+
+b111 ,
+#40000
+b1000 ,
+#45000

@@ -1,0 +1,44 @@
+$date
+	Mon Nov 03 11:06:17 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module segment7_ascii_tb $end
+$var wire 8 ! ascii [7:0] $end
+$var reg 7 " seg [6:0] $end
+$scope module dut $end
+$var wire 7 # seg [6:0] $end
+$var reg 8 $ ascii [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#5000
+b110000 !
+b110000 $
+b111111 "
+b111111 #
+#10000
+b111000 !
+b111000 $
+b1111111 "
+b1111111 #
+#15000
+b110011 !
+b110011 $
+b1001111 "
+b1001111 #
+#25000

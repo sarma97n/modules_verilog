@@ -1,0 +1,46 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001c8e5c36430 .scope module, "data_types" "data_types" 2 1;
+ .timescale 0 0;
+v000001c8e5c365c0_0 .var "a_string", 88 0;
+v000001c8e5c36660 .array "memory", 0 63, 7 0;
+v000001c8e5c36700_0 .var/real "real_number", 0 0;
+v000001c8e5c3ed30_0 .var/s "reg_signed", 7 0;
+v000001c8e5c3edd0_0 .var "reg_unsigned", 3 0;
+    .scope S_000001c8e5c36430;
+T_0 ;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000001c8e5c3edd0_0, 0, 4;
+    %pushi/vec4 231, 0, 8;
+    %store/vec4 v000001c8e5c3ed30_0, 0, 8;
+    %pushi/real 1095552204, 4071; load=32.6500
+    %pushi/real 3355443, 4049; load=32.6500
+    %add/wr;
+    %store/real v000001c8e5c36700_0;
+    %pushi/vec4 2695145024, 0, 34;
+    %concati/vec4 2794101394, 0, 32;
+    %concati/vec4 4411214, 0, 23;
+    %store/vec4 v000001c8e5c365c0_0, 0, 89;
+    %pushi/vec4 85, 0, 8;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000001c8e5c36660, 4, 0;
+    %pushi/vec4 170, 0, 8;
+    %ix/load 4, 63, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4a v000001c8e5c36660, 4, 0;
+    %vpi_call 2 16 "$display", "reg_unsigned=%d \012 reg_signed=%d \012 real_number=%f \012 a_string=%s \012 memory[0]=%d, memory[63]=%d", v000001c8e5c3edd0_0, v000001c8e5c3ed30_0, v000001c8e5c36700_0, v000001c8e5c365c0_0, &A<v000001c8e5c36660, 0>, &A<v000001c8e5c36660, 63> {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "data_types.v";

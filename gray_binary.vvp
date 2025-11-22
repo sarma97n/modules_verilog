@@ -1,0 +1,68 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027edc966570 .scope module, "gray_binary" "gray_binary" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "gray_in";
+    .port_info 1 /OUTPUT 8 "binary_out";
+L_0000027edc874830 .functor XOR 1, L_0000027edc8c0430, L_0000027edc8c01b0, C4<0>, C4<0>;
+L_0000027edc968530 .functor XOR 1, L_0000027edc8c0070, L_0000027edc8c09d0, C4<0>, C4<0>;
+L_0000027edc968c30 .functor XOR 1, L_0000027edc8c02f0, L_0000027edc8c0b10, C4<0>, C4<0>;
+L_0000027edc9693c0 .functor XOR 1, L_0000027edc8c0390, L_0000027edc8c0110, C4<0>, C4<0>;
+L_0000027edc966c30 .functor XOR 1, L_0000027edc8c04d0, L_0000027edc8c1830, C4<0>, C4<0>;
+L_0000027edc966890 .functor XOR 1, L_0000027edc8c1650, L_0000027edc8c0570, C4<0>, C4<0>;
+L_0000027edc966810 .functor XOR 1, L_0000027edc8c1d30, L_0000027edc8c0cf0, C4<0>, C4<0>;
+v0000027edc865b90_0 .net *"_ivl_10", 0 0, L_0000027edc874830;  1 drivers
+v0000027edc866590_0 .net *"_ivl_15", 0 0, L_0000027edc8c0070;  1 drivers
+v0000027edc865690_0 .net *"_ivl_17", 0 0, L_0000027edc8c09d0;  1 drivers
+v0000027edc8661d0_0 .net *"_ivl_18", 0 0, L_0000027edc968530;  1 drivers
+v0000027edc866310_0 .net *"_ivl_23", 0 0, L_0000027edc8c02f0;  1 drivers
+v0000027edc865c30_0 .net *"_ivl_25", 0 0, L_0000027edc8c0b10;  1 drivers
+v0000027edc865730_0 .net *"_ivl_26", 0 0, L_0000027edc968c30;  1 drivers
+v0000027edc865cd0_0 .net *"_ivl_3", 0 0, L_0000027edc8c0c50;  1 drivers
+v0000027edc865d70_0 .net *"_ivl_31", 0 0, L_0000027edc8c0390;  1 drivers
+v0000027edc865e10_0 .net *"_ivl_33", 0 0, L_0000027edc8c0110;  1 drivers
+v0000027edc865f50_0 .net *"_ivl_34", 0 0, L_0000027edc9693c0;  1 drivers
+v0000027edc865eb0_0 .net *"_ivl_39", 0 0, L_0000027edc8c04d0;  1 drivers
+v0000027edc865ff0_0 .net *"_ivl_41", 0 0, L_0000027edc8c1830;  1 drivers
+v0000027edc866090_0 .net *"_ivl_42", 0 0, L_0000027edc966c30;  1 drivers
+v0000027edc866130_0 .net *"_ivl_47", 0 0, L_0000027edc8c1650;  1 drivers
+v0000027edc8c1510_0 .net *"_ivl_49", 0 0, L_0000027edc8c0570;  1 drivers
+v0000027edc8c11f0_0 .net *"_ivl_50", 0 0, L_0000027edc966890;  1 drivers
+v0000027edc8c0250_0 .net *"_ivl_56", 0 0, L_0000027edc8c1d30;  1 drivers
+v0000027edc8c1f10_0 .net *"_ivl_58", 0 0, L_0000027edc8c0cf0;  1 drivers
+v0000027edc8c0bb0_0 .net *"_ivl_59", 0 0, L_0000027edc966810;  1 drivers
+v0000027edc8c0d90_0 .net *"_ivl_7", 0 0, L_0000027edc8c0430;  1 drivers
+v0000027edc8c1b50_0 .net *"_ivl_9", 0 0, L_0000027edc8c01b0;  1 drivers
+v0000027edc8c1790_0 .net "binary_out", 7 0, L_0000027edc8c1dd0;  1 drivers
+o0000027edc8773d8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000027edc8c16f0_0 .net "gray_in", 7 0, o0000027edc8773d8;  0 drivers
+L_0000027edc8c0c50 .part o0000027edc8773d8, 7, 1;
+L_0000027edc8c0430 .part o0000027edc8773d8, 7, 1;
+L_0000027edc8c01b0 .part o0000027edc8773d8, 6, 1;
+L_0000027edc8c0070 .part o0000027edc8773d8, 6, 1;
+L_0000027edc8c09d0 .part o0000027edc8773d8, 5, 1;
+L_0000027edc8c02f0 .part o0000027edc8773d8, 5, 1;
+L_0000027edc8c0b10 .part o0000027edc8773d8, 4, 1;
+L_0000027edc8c0390 .part o0000027edc8773d8, 4, 1;
+L_0000027edc8c0110 .part o0000027edc8773d8, 3, 1;
+L_0000027edc8c04d0 .part o0000027edc8773d8, 3, 1;
+L_0000027edc8c1830 .part o0000027edc8773d8, 2, 1;
+L_0000027edc8c1650 .part o0000027edc8773d8, 2, 1;
+L_0000027edc8c0570 .part o0000027edc8773d8, 1, 1;
+LS_0000027edc8c1dd0_0_0 .concat8 [ 1 1 1 1], L_0000027edc966810, L_0000027edc966890, L_0000027edc966c30, L_0000027edc9693c0;
+LS_0000027edc8c1dd0_0_4 .concat8 [ 1 1 1 1], L_0000027edc968c30, L_0000027edc968530, L_0000027edc874830, L_0000027edc8c0c50;
+L_0000027edc8c1dd0 .concat8 [ 4 4 0 0], LS_0000027edc8c1dd0_0_0, LS_0000027edc8c1dd0_0_4;
+L_0000027edc8c1d30 .part o0000027edc8773d8, 1, 1;
+L_0000027edc8c0cf0 .part o0000027edc8773d8, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "gray_binary.v";
